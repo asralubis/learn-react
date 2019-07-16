@@ -1,41 +1,52 @@
-import React, { Component } from 'react';
-import '../style/card.css';
-import { profileData } from "./card-data";
+import React from 'react';
+// import React, { Component } from 'react';
+// import '../style/card.css';
+// import styled from 'styled-components';
+// import { profileData } from "./card-data";
 // import { CardBox, ContainerCard } from './card-style';
 
 
 
 
-class Card extends Component {
-  constructor() {
-    super();
-    this.state = {
-      profileData
-    }
-  }
-  render() {
-    return (
-      <div className="card-container">
-        {
-          this.state.profileData.map((data) => {
-            return (
-              <div className="card-box" key={data}>
-                <div className='card-front'>
-                  <img src={data.foto} alt="FOTO" />
-                </div>
-                <div className='card-back'>
-                  {data.profile}
-                </div>
-              </div>
-            )
-          })
-        }
+// class Card extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       profileData
+//     }
+//   }
+//   render() {
+//     return (
+//       <div className="card-container">
+//         {
+//           this.state.profileData.map((data) => {
+//             return (
+//               <div className="card-box" key={data}>
+//                 <div className='card-front'>
+//                   <img src={data.foto} alt="FOTO" />
+//                 </div>
+//                 <div className='card-back'>
+//                   {data.profile}
+//                 </div>
+//               </div>
+//             )
+//           })
+//         }
+//       </div>
+//     );
+//   }
+// }
+
+const Card = () => {
+  return (
+    <div>
+      <div>
+        <h1>ini card njing</h1>
+        <img src="../img/profile-4.jpeg" alt="profile-1" srcset="" />
       </div>
-    );
-  }
+    </div>
+  )
 }
-
-
 
 
 
