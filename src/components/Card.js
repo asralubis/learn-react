@@ -1,6 +1,6 @@
 import React from 'react';
 // import React, { Component } from 'react';
-// import '../style/Card.css';
+import '../style/Card.css';
 // import styled from 'styled-components';
 // import { profileData } from "./Card-data";
 // import { CardBox, ContainerCard } from './card-style';
@@ -20,62 +20,90 @@ const CardBox = {
   margin: '20px',
   display: 'inline-block',
   transition: 'all 0.5s ease',
-  // transform: 'preserve-3d',
+  transformStyle: 'preserve-3d',
   cursor: 'pointer',
-  // position: 'absolute',
-  // radius: '10px',
-  // display: 'flex',
-  ':hover': {
-    transform: 'rotateY(180deg)',
-  }
 }
-
-
-// .card - box: hover {
-//   transform: rotateY(180deg);
-// }
 
 const CardFront = {
   width: '290px',
   height: '400px',
   border: '10px',
-  size: 'cover',
   position: 'absolute',
-  backfaceVisibility: 'hidden',
+  display: 'flex',
 }
-
 
 const CardBack = {
-  transform: 'rotateY(180deg)',
-  color: 'red',
-  backfaceVisibility: 'hidden',
+  width: '290px',
+  height: '400px',
+  border: '10px',
+  position: 'absolute',
+  display: 'flex',
 }
 
-// .card - front, .card - back, img {
-//   position: absolute;
-//   width: 290px;
-//   height: 400px;
-//   border - radius: 10px;
-//   backface - visibility: hidden;
-//   display: flex;
-//   align - items: center;
-//   justify - content: center;
-// }
+const ImgStyles = {
+  width: '290px',
+  height: '400px',
+}
 
 
 const Card = () => {
   return (
     <div className="Card-Container" style={CardContainer}>
       <div>
-        <div style={CardBox}>
-          <div style={CardFront}>
-            <img src={require("./img/Profile-1.jpg")}
+        <div className="Card-Box" style={CardBox}>
+          <div className="Card-Front" style={CardFront}>
+            <img
+              style={ImgStyles}
+              src={require("./img/Profile-1.jpg")}
+              alt="Foto Guru"
             />
           </div>
+          <div className="Card-Back" style={CardBack}>
+            <h1>NAMA GURU</h1>
+          </div>
         </div>
+
+        <div className="Card-Box" style={CardBox}>
+          <div className="Card-Front" style={CardFront}>
+            <img
+              style={ImgStyles}
+              src={require("./img/Profile-2.jpg")}
+              alt="Foto Guru"
+            />
+          </div>
+          <div className="Card-Back" style={CardBack}>
+            <h1>NAMA GURU</h1>
+          </div>
+        </div>
+
+        <div className="Card-Box" style={CardBox}>
+          <div className="Card-Front" style={CardFront}>
+            <img
+              style={ImgStyles}
+              src={require("./img/Profile-3.jpg")}
+              alt="Foto Guru"
+            />
+          </div>
+          <div className="Card-Back" style={CardBack}>
+            <h1>NAMA GURU</h1>
+          </div>
+        </div>
+
+        <div className="Card-Box" style={CardBox}>
+          <div className="Card-Front" style={CardFront}>
+            <img
+              style={ImgStyles}
+              src={require("./img/Profile-4.jpg")}
+              alt="Foto Guru"
+            />
+          </div>
+          <div className="Card-Back" style={CardBack}>
+            <h1>NAMA GURU</h1>
+          </div>
+        </div>
+
+
       </div>
-
-
     </div>
   )
 }

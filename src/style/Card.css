@@ -1,4 +1,4 @@
-.card-container {
+/* .card-container {
  margin: 10px;
  perspective: 700;
 }
@@ -17,27 +17,36 @@ display: inline-block;
 transition: all 0.5s ease;
 transform-style: preserve-3d;
 cursor: pointer;
+} */
+.Card-Box {
+ /* transform-style: preserve-3d; */
 }
 
+.Card-Back {
+ transform: rotateY(180deg);
+ background-color: blue;
+}
 
-.card-box:hover {
+.Card-Box:hover {
  transform: rotateY(180deg);
 }
 
-.card-front {
+.Card-Back, .Card-Front {
+ backface-visibility: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* .card-front {
  background-size: cover;
 }
 
 .card-container {
  background-color: darkorange;
-}
+} /*
 
-.card-back {
- transform: rotateY(180deg);
- background-color: blue;
-}
-
-.card-front, .card-back, img {
+/* .card-front, .card-back, img {
  position: absolute;
  width: 290px;
  height: 400px;
@@ -46,7 +55,7 @@ cursor: pointer;
  display: flex;
  align-items: center;
  justify-content: center;
-}
+} */
 
 /* .card-image {
  width: 290px;
@@ -54,7 +63,11 @@ cursor: pointer;
 }
  */
 
-
+img {
+ backface-visibility: hidden;
+ display: flex;
+ position: absolute;
+}
 
 
 
