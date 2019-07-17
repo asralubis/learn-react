@@ -1,7 +1,7 @@
 export const profileData = [
   {
     id: 1,
-    foto: 'img/profile-1.jpg',
+    foto: './img/Foto.png',
     profile:
       [
         "Nama: Muhammad Asrawi",

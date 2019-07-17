@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import Card from '../components/Card';
 // import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -9,7 +10,6 @@ import Header from '../components/Header';
 // import LoginForm from './components/login';
 // import RegisterForm from './components/register';
 
-import Card from '../components/Card';
 // import Footer from './components/footer';
 
 
@@ -32,7 +32,6 @@ const Home = () => {
  return (
   <div>
    <Navigation />
-   <Header />
    <Header title="AxstrA School" />
    <Card />
   </div>

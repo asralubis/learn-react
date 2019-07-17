@@ -37,7 +37,7 @@ cursor: pointer;
  background-color: blue;
 }
 
-.card-front, .card-back {
+.card-front, .card-back, img {
  position: absolute;
  width: 290px;
  height: 400px;
