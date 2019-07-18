@@ -1,5 +1,4 @@
 import React from 'react';
-// import React, { Component } from 'react';
 import '../style/Card.css';
 // import styled from 'styled-components';
 // import { profileData } from "./Card-data";
@@ -30,6 +29,7 @@ const CardFront = {
   border: '10px',
   position: 'absolute',
   display: 'flex',
+  backfaceVisibility: 'hidden',
 }
 
 const CardBack = {
@@ -37,7 +37,9 @@ const CardBack = {
   height: '400px',
   border: '10px',
   position: 'absolute',
-  display: 'flex',
+  transform: 'rotateY(180deg)',
+  backfaceVisibility: 'hidden',
+
 }
 
 const ImgStyles = {
@@ -59,7 +61,9 @@ const Card = () => {
             />
           </div>
           <div className="Card-Back" style={CardBack}>
-            <h1>NAMA GURU</h1>
+            <h1>NURLAELA</h1>
+            <p>Nama Lengkap: Siti Nurlaela</p>
+            <p>Tanggal Lahir: Jakarta, 01 Januari 1989</p>
           </div>
         </div>
 
