@@ -1,30 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-import Background from './img/headImg.jpg';
-
-import '../style/header.css';
+// import '../style/header.css';
 
 
-const myStyles = {
- backgroundImage: `url( ${Background})`,
- height: '80vh',
- backgroundSize: 'cover'
+const MyStyles = styled.div`
+ /* background-image: url("./img/HeadImg.jpg"); */
+ height: 80vh;
+ width: 1000px;
+ background-size: cover;
+`
 
+
+const Header = () => {
+ return (
+  <MyStyles
+   src={require('./img/HeadImg.jpg')} alt="HEADEEEEEEER" > fottttoooooo
+  </MyStyles>
+
+ )
 }
-
-
-
-class Header extends Component {
- render() {
-  return (
-
-   <header style={myStyles}>
-    <h1>{this.props.title}</h1>
-
-   </header>
-
-  );
- }
-};
 
 export default Header;
