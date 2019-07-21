@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../style/SignIn.css';
 
 class SignIn extends Component {
  state = {
@@ -17,9 +17,13 @@ class SignIn extends Component {
  }
  render() {
   return (
-   <div className="container">
-    <form onSubmit={this.handleSubmit} className="white">
-     <h5>Sign In</h5>
+   <div className="container-modal">
+    <form onSubmit={this.handleSubmit} className="modal-content">
+
+     <div className="close">+</div>
+
+     <h1>Sign In</h1>
+
      <div className="input-field">
       <label htmlFor="email">Email</label>
       <input type="email" id="email" onChange={this.handleChange} />
@@ -29,14 +33,12 @@ class SignIn extends Component {
       <input type="password" id="password" onChange={this.handleChange} />
      </div>
      <div className="input-field">
-      <button className="btn">Sign In</button>
+      <button className="button">Sign In</button>
      </div>
     </form>
    </div>
   )
  }
 }
-
-
 
 export default SignIn;
