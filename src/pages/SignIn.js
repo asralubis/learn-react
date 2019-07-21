@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 
 class SignIn extends Component {
  state = {
-
+  email: '',
+  password: ''
  }
  handleChange = (e) => {
-  console.log(e)
+  this.setState({
+   [e.target.id]: e.target.value
+  })
  }
  handleSubmit = (e) => {
-  console.log(e)
+  e.preventDefault();
+  console.log(this.state);
  }
-
-
-
-
  render() {
   return (
    <div className="container">
@@ -36,6 +36,7 @@ class SignIn extends Component {
   )
  }
 }
+
 
 
 export default SignIn;

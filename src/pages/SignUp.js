@@ -2,46 +2,51 @@ import React, { Component } from 'react';
 
 
 class SignUp extends Component {
- constructor(props) {
-  super(props);
-  this.state = {
-   email: '',
-   password: '',
-  }
+ state = {
+  email: '',
+  password: '',
+  firstName: '',
+  lastName: '',
  }
-
-
-
- SignUp
-
+ handleChange = (e) => {
+  this.setState({
+   [e.target.id]: e.target.value
+  })
+ }
+ handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(this.state);
+ }
  render() {
   return (
-   <div className="form-inline">
-    <h2>Sign Up
-     <div className="form-group">
-      <input
-       className="form-control"
-       type="text"
-       placeholder="email"
-       onChange={event => this.setState({ email: event.target.value })}
-      />
-      <input
-       className="form-control"
-       type="password"
-       placeholder="password"
-       onChange={event => this.setState({ password: event.target.value })}
-      />
-      <button
-       className="btn btn-primary"
-       type="button"
-      >
-       Sign Up
-       </button>
+   <div className="container">
+    <form onSubmit={this.handleSubmit} className="white">
+     <h5>Sign In</h5>
+     <div className="input-field">
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" onChange={this.handleChange} />
      </div>
-    </h2>
+     <div className="input-field">
+      <label htmlFor="password">Password</label>
+      <input type="password" id="password" onChange={this.handleChange} />
+     </div>
+     <div className="input-field">
+      <label htmlFor="firstName">First Name</label>
+      <input type="text" id="firstName" onChange={this.handleChange} />
+     </div>
+     <div className="input-field">
+      <label htmlFor="lastName">Last Name</label>
+      <input type="text" id="lastName" onChange={this.handleChange} />
+     </div>
+     <div className="input-field">
+      <button className="btn">Sign In</button>
+     </div>
+    </form>
    </div>
   )
  }
 }
+
+
 
 export default SignUp;
