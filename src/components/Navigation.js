@@ -45,11 +45,11 @@ const Navigation = () => {
         </NavList>
 
         <NavList>
-          <StyledLink to="/Sign Up">Sign Up</StyledLink>
+          <StyledLink to="/SignUp">Sign Up</StyledLink>
         </NavList>
 
         <NavList >
-          <StyledLink to="/Sign In">Sign In</StyledLink>
+          <StyledLink to="/SignIn">Sign In</StyledLink>
         </NavList>
 
       </ NavUnlist >
