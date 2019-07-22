@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../style/SignIn.css';
 
+
+
 class SignIn extends Component {
  state = {
   email: '',
@@ -15,14 +17,14 @@ class SignIn extends Component {
   e.preventDefault();
   console.log(this.state);
  }
+
  render() {
   return (
-   <div className="container-modal">
-    <form onSubmit={this.handleSubmit} className="modal-content">
 
-     <div className="close">+</div>
 
-     <h1>Sign In</h1>
+   <div className="login-form">
+    <div className="arrow-up" ></div>
+    <form>
 
      <div className="input-field">
       <label htmlFor="email">Email</label>
